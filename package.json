@@ -1,0 +1,29 @@
+{
+  "name": "campus-election-backend",
+  "version": "1.0.0",
+  "description": "Production-quality campus election voting system API",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "clean-port": "npx --yes kill-port 5000",
+    "seed": "node src/scripts/seed.js",
+    "test": "vitest run",
+    "test:postman": "npx --yes newman run ../postman/Campus_Election_API.postman_collection.json --environment ../postman/Campus_Election_Environment.postman_environment.json"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.3.1",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.14.0"
+  },
+  "devDependencies": {
+    "supertest": "^7.1.4",
+    "vitest": "^3.1.2"
+  }
+}
